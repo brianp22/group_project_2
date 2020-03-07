@@ -4,9 +4,12 @@ module.exports = {
   development: {
     username: process.env.MYSQL_USERNAME,
     password: process.env.MYSQL_PASSWORD,
-    database: "passport_demo",
+    database: "coffee_ordersDB",
     host: "127.0.0.1",
-    dialect: "mysql"
+    dialect: "mysql",
+    define: {
+      timestamps: false
+    }
   },
 
   production: {
