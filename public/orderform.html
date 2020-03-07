@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Coffee</title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+          <h1>JavaSips.js</h1>
+          <div class="row">
+            <div class="input-field col s12"id="milk">
+                    <text>Coffee</text>
+                      <select>
+                        <option value="" disabled selected></option>
+                        <option value="1">Light Roast</option>
+                        <option value="2">Medium Roast</option>
+                        <option value="3">Dark Roast</option>
+                      </select>
+            </div>
+       </div>
+    <div class="row">
+        <div class="input-field col s12"id="milk">
+                <text>Type of Milk </text>
+                  <select>
+                    <option value="" disabled selected></option>
+                    <option value="1">Whole Milk</option>
+                    <option value="2">Slik</option>
+                    <option value="3">2%</option>
+                  </select>
+        </div>
+   </div>
+                <div class="row">
+     <div class="input-field col s12"id="suagr">
+                <text>Sugar </text>
+                  <select>
+                    <option value="" disabled selected></option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                  </select>
+                </div>
+                <div class="row">
+         <div class="input-field col s12" id="size">
+                        <text>Size</text>
+                          <select>
+                            <option value="" disabled selected></option>
+                            <option value="1">Small</option>
+                            <option value="2">Medium</option>
+                            <option value="2">Large</option>
+                          </select>
+                        </div>
+                        <div class="row">
+                 <div class="input-field col s12"id="Quanity">
+                                <text>Quanity</text>
+                                  <select>
+                                    <option value="" disabled selected></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="2">3</option>
+                                    <option value="2">4</option>
+                                    <option value="2">5</option>
+                                  </select>
+                                </div>
+                                <div class="row">
+                                  <button class="btn waves-effect waves-light" type="submit" name="action"id="submit">Submit
+                                  </button>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+<script>
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+</script>
+</body>
+
+</html>
