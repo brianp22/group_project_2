@@ -15,15 +15,17 @@
     <div class="container">
         <div class="form">
           <h1>JavaSips.js</h1>
-      <div class="input-field col s12"id="coffee">
-          <text>Coffee blends</text>
-            <select>
-              <option value="" disabled selected></option>
-              <option value="1">Light Roast</option>
-              <option value="2">Medium Roast</option>
-              <option value="3">Dark Roast</option>
-            </select>
-          </div>
+          <div class="row">
+            <div class="input-field col s12"id="milk">
+                    <text>Coffee</text>
+                      <select>
+                        <option value="" disabled selected></option>
+                        <option value="1">Light Roast</option>
+                        <option value="2">Medium Roast</option>
+                        <option value="3">Dark Roast</option>
+                      </select>
+            </div>
+       </div>
     <div class="row">
         <div class="input-field col s12"id="milk">
                 <text>Type of Milk </text>
@@ -33,9 +35,9 @@
                     <option value="2">Slik</option>
                     <option value="3">2%</option>
                   </select>
-                </div>
+        </div>
+   </div>
                 <div class="row">
-                 <div class="row">
      <div class="input-field col s12"id="suagr">
                 <text>Sugar </text>
                   <select>
@@ -70,9 +72,14 @@
                                   <button class="btn waves-effect waves-light" type="submit" name="action"id="submit">Submit
                                   </button>  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/login.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+            
+<script>
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+</script>
 </body>
 
 </html>
