@@ -6,13 +6,13 @@ $(document).ready(function() {
 
   // When the signup button is clicked, we validate the email and password are not blank
   signUpForm.on("click", function(event) {
-    console.log('hi')
+    console.log("hi");
     event.preventDefault();
     var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
     };
-    console.log(userData)
+    console.log(userData);
     if (!userData.email || !userData.password) {
       return;
     }
