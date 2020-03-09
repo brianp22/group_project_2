@@ -8,10 +8,39 @@ body{
   margin:auto;
   border-radius:6px;
   border:3px solid #5e5553;
-  height:950px;
+  height:1050px;
   max-width:500px;
   padding:17px;
   background-color:#f9f8f6;
+}
+.loginform{
+  display:block;
+  margin-top: 70px !important;
+  margin-bottom:50px !important;
+  margin:auto;
+  border-radius:6px;
+  border:3px solid #5e5553;
+  height:750px;
+  max-width:500px;
+  padding:17px;
+  background-color:#f9f8f6;
+}
+.QRform{
+  display:block;
+  margin-top: 70px !important;
+  margin-bottom:50px !important;
+  margin:auto;
+  border-radius:6px;
+  border:3px solid #5e5553;
+  height:800px;
+  max-width:500px;
+  padding:17px;
+  background-color:#f9f8f6;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 h1{
   color:#763300;
