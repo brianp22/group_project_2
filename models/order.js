@@ -1,8 +1,6 @@
 /* eslint-disable camelcase */
 /* eslint-disable indent */
 
-var Sequelize = require("sequelize");
-
 module.exports = function(sequelize, DataTypes) {
   var Order = sequelize.define("Order", {
     name: {
@@ -27,11 +25,6 @@ module.exports = function(sequelize, DataTypes) {
     add_2: {
       type: DataTypes.STRING,
       defaultValue: null
-    },
-    created_at: {
-      type: "TIMESTAMP",
-      defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
-      allowNull: false
     },
     completed: {
       type: DataTypes.BOOLEAN,
