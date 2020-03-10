@@ -47,13 +47,10 @@ module.exports = function(app) {
     req.logout();
     res.redirect("/");
   });
-  ///route for rendering all tables, sorted by the BOOLEAN
+
+  ///route for rendering all tablesin JSON, sorted by the BOOLEAN
   app.get("/api/orders", function(req, res) {
-    db.Order.findAll({
-      where: {
-        waitlist: false
-      }
-    }).then(function(dbResponse) {
+    db.Order.findAll({}).then(function(dbResponse) {
       res.json(dbResponse);
     });
   });
