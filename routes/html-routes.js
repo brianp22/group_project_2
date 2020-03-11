@@ -8,7 +8,7 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/members");
+      res.redirect("/orderform.html");
     }
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
@@ -20,11 +20,14 @@ module.exports = function(app) {
     }
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
-
+  ///Route for taking you to the employee page
+  app.get("/employee.html", function(req, res) {
+    res.redirect("/employee.html");
+  });
   app.get("/login", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/orderform");
+      res.redirect("/orderform.html");
     }
     res.sendFile(path.join(__dirname, "../public/orderform.html"));
   });
