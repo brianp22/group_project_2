@@ -48,9 +48,6 @@ module.exports = function(app) {
     res.redirect("/");
   });
 
-  ///route for rendering all tablesin JSON, sorted by the BOOLEAN
-  app.get("/api/orders", function(req, res) {
-    db.Order.findAll({}).then(function(dbResponse) {
   ///route for rendering all tables, sorted by the BOOLEAN
   app.get("/api/orders", function(req, res) {
     db.Order.findAll({
