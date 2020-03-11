@@ -10,6 +10,8 @@ body{
   border:3px solid #5e5553;
   height:1200px;
   max-width:520px;
+  height:1050px;
+  max-width:800px;
   padding:17px;
   background-color:#f9f8f6;
 }
@@ -93,4 +95,7 @@ text{
   text-align:left;
   font-size: 30px;
   font-family: 'Fredericka the Great', cursive;
+}
+span{
+  padding:15px;
 }

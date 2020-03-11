@@ -1,7 +1,7 @@
+/* eslint-disable camelcase */
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
-
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
@@ -13,7 +13,6 @@ module.exports = function(app) {
       id: req.user.id
     });
   });
-
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
@@ -30,13 +29,38 @@ module.exports = function(app) {
         res.status(401).json(err);
       });
   });
-
+  app.post("/api/orders", function(req, res) {
+    // get data from the client
+    db.Order.create({
+      name: req.body.name,
+      drink_type: req.body.drink_type,
+      size: req.body.size,
+      add_1: req.body.add_1,
+      add_2: req.body.add_2,
+      completed: false
+    }).then(function(dbResponse) {
+      res.json(dbResponse);
+    });
+  });
   // Route for logging user out
   app.get("/logout", function(req, res) {
     req.logout();
     res.redirect("/");
   });
 
+  ///route for rendering all tablesin JSON, sorted by the BOOLEAN
+  app.get("/api/orders", function(req, res) {
+    db.Order.findAll({}).then(function(dbResponse) {
+  ///route for rendering all tables, sorted by the BOOLEAN
+  app.get("/api/orders", function(req, res) {
+    db.Order.findAll({
+      where: {
+        waitlist: false
+      }
+    }).then(function(dbResponse) {
+      res.json(dbResponse);
+    });
+  });
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function(req, res) {
     if (!req.user) {
