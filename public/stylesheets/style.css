@@ -8,8 +8,8 @@ body{
   margin:auto;
   border-radius:6px;
   border:3px solid #5e5553;
-  height:1050px;
-  max-width:500px;
+  height:1200px;
+  max-width:520px;
   padding:17px;
   background-color:#f9f8f6;
 }
@@ -62,19 +62,32 @@ h3{
 }
 #login{
   background-color: #763300;
-  padding-right: 5rem;
+  /* padding-right: 5rem; */
   margin-right: 10px;
+  margin-left: 50px;
 }
 #new{
   background-color: #763300;
-  padding-right: 5rem;
-  margin-right: 10px;
+  /* padding-right: 5rem; */
+  margin-left: 100px;
 }
 #submit{
   background-color: #763300;
   padding-right: 5rem;
+  margin-left: 30%;
+  margin-right: 30%
+}
+#logout{
+  background-color: #763300;
+  margin-right: 10px;
+  margin-left: 25px;
+}
+#another{
+  background-color: #763300;
+ margin-left: 100px;
   margin-right: 10px;
 }
+
 text{
   color:#5e5553;
   text-align:left;
