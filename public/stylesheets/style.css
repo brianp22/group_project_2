@@ -8,7 +8,7 @@ body{
   margin:auto;
   border-radius:6px;
   border:3px solid #5e5553;
-  height:1200px;
+  height:1050px;
   max-width:520px;
   padding:17px;
   background-color:#f9f8f6;
@@ -81,13 +81,17 @@ h3{
   background-color: #763300;
   margin-right: 10px;
   margin-left: 25px;
+  margin-top: 200px;
 }
 #another{
   background-color: #763300;
  margin-left: 100px;
   margin-right: 10px;
+  margin-top:200px;
 }
-
+.buttons{
+  margin-bottom: 20px;
+}
 text{
   color:#5e5553;
   text-align:left;
