@@ -6,6 +6,13 @@ module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
+
+  app.get("/api/orders", function(req, res) {
+    db.Order.findAll({}).then(function(dbResponse) {
+      res.json(dbResponse);
+    });
+  });
+
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
@@ -48,16 +55,6 @@ module.exports = function(app) {
     res.redirect("/");
   });
 
-  ///route for rendering all tables, sorted by the BOOLEAN
-  app.get("/api/orders", function(req, res) {
-    db.Order.findAll({
-      where: {
-        waitlist: false
-      }
-    }).then(function(dbResponse) {
-      res.json(dbResponse);
-    });
-  });
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function(req, res) {
     if (!req.user) {
