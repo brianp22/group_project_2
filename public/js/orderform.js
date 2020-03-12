@@ -7,7 +7,6 @@ $(document).ready(function() {
   var add_1 = $("select#add_1");
   var add_2 = $("select#add_2");
   var size = $("select#size");
-  var drinkQuantity = $("select#drinkQuantity");
   var submitOrder = $("button#submitOrder");
 
   submitOrder.on("click", function(event) {
@@ -19,8 +18,7 @@ $(document).ready(function() {
       drink_type: drink_type.val(),
       size: size.val(),
       add_1: add_1.val(),
-      add_2: add_2.val(),
-      drinkQuantity: drinkQuantity.val()
+      add_2: add_2.val()
     };
 
     console.log(newOrder);
@@ -39,7 +37,6 @@ $(document).ready(function() {
       add_1.val("");
       add_2.val("");
       size.val("");
-      drinkQuantity.val("");
     });
   });
 });
