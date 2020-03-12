@@ -2,12 +2,17 @@
 $(document).ready(function() {
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
+
   var nameField = $("input#nameField");
   var drink_type = $("select#drink_type");
   var add_1 = $("select#add_1");
   var add_2 = $("select#add_2");
   var size = $("select#size");
   var submitOrder = $("button#submitOrder");
+
+  function goToQR() {
+    location.href = "../QR.html";
+  }
 
   submitOrder.on("click", function(event) {
     event.preventDefault();
@@ -37,6 +42,8 @@ $(document).ready(function() {
       add_1.val("");
       add_2.val("");
       size.val("");
+
+      goToQR();
     });
   });
 });
