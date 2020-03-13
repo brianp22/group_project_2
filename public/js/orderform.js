@@ -14,6 +14,14 @@ $(document).ready(function() {
     location.href = "../QR.html";
   }
 
+  function writeLocalStorage() {
+    localStorage.setItem("nameField", nameField.val());
+    localStorage.setItem("drink_type", drink_type.val());
+    localStorage.setItem("add_1", add_1.val());
+    localStorage.setItem("add_2", add_2.val());
+    localStorage.setItem("size", size.val());
+  }
+
   submitOrder.on("click", function(event) {
     event.preventDefault();
 
@@ -37,6 +45,7 @@ $(document).ready(function() {
       alert("Yay! Your order has been pushed");
 
       // Clear the form when submitting
+      writeLocalStorage();
       nameField.val("");
       drink_type.val("");
       add_1.val("");
