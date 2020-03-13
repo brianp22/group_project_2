@@ -14,21 +14,11 @@ $(document).ready(function() {
         // Then display the fields in the HTML (Section Name, Date, URL)
         holdsTable.append(
           $("<div class='row'>"),
-          $("<span>")
-            .text(tableData[i].name)
-            .attr("class", "col s2"),
-          $("<span>")
-            .attr("class", "col s2")
-            .text(tableData[i].drink_type),
-          $("<span>")
-            .attr("class", "col s2")
-            .text(tableData[i].size),
-          $("<span>")
-            .attr("class", "col s2")
-            .text(tableData[i].add_1),
-          $("<span>")
-            .attr("class", "col s2")
-            .text(tableData[i].add_2),
+          $("<span>").text(tableData[i].name),
+          $("<span>").text(tableData[i].drink_type),
+          $("<span>").text(tableData[i].size),
+          $("<span>").text(tableData[i].add_1),
+          $("<span>").text(tableData[i].add_2),
           $("<button>").attr("id", "incompleteOrder")
         );
       }
