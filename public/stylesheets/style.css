@@ -98,3 +98,22 @@ text{
   font-size: 30px;
   font-family: 'Fredericka the Great', cursive;
 }
+#completeOrder{
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 12px;
+}
+#incompleteOrder{
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 12px;
+}
+span{
+  padding-right: 10px;
+}
