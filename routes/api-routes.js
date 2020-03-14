@@ -7,12 +7,14 @@ module.exports = function(app) {
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
 
+  // Route to get orders from database
   app.get("/api/orders", function(req, res) {
     db.Order.findAll({}).then(function(dbResponse) {
       res.json(dbResponse);
     });
   });
 
+  // Route to send User password and username to database
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
@@ -36,8 +38,9 @@ module.exports = function(app) {
         res.status(401).json(err);
       });
   });
+
+  //Adding orders to the database
   app.post("/api/orders", function(req, res) {
-    // get data from the client
     db.Order.create({
       name: req.body.name,
       drink_type: req.body.drink_type,
@@ -49,6 +52,7 @@ module.exports = function(app) {
       res.json(dbResponse);
     });
   });
+
   // Route for logging user out
   app.get("/logout", function(req, res) {
     req.logout();

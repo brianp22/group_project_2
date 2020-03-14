@@ -1,1 +1,3 @@
+DROP DATABASE IF EXISTS coffee_ordersDB;
+
 CREATE DATABASE coffee_ordersDB;
